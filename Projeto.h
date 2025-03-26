@@ -9,7 +9,7 @@ typedef struct {
 typedef struct {
     Tarefa tarefas[TOTAL_TAREFAS]; //Erro 3
     int qtd;
-} ListaDeTarefa;
+} ListaDeTarefas; //Erro 4
 
 int criarTarefa(ListaDeTarefas *lt);
 int deletarTarefa(ListaDeTarefas *lt);
