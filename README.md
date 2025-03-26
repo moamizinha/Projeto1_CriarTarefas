@@ -17,6 +17,7 @@ main.c
 2 - chamando as bibliotecas com "", teria que chamar com <>.
 7 - na linha 10, pois estava "codigo=carregarTarefas(lt, arquivo);" foi mudado para "codigo=carregarTarefas(&lt, arquivo);" faltou o "&" para compilar.
 11 - na linha 18 na funcao do menu, pois foi mudado o nome da funcao para exibirMenu, estava "exibeMenu(); " foi mudado para "exibirMenu()".
+12 - na linha 36 pois no codigo esta "if (codigo ==2)" mas daria outro tipo de erro, foi mudado para "if (codigo ==1)".
 
 ////////////////////////////////////////////////////////////////////////////
 Projeto.h

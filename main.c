@@ -33,7 +33,7 @@ else if(codigo ==2)
 }
 else if(opcao == 3){
     codigo=listarTarefas(&lt);
-   if (codigo ==2)
+   if (codigo ==1) //Erro 12
    printf("Erro ao listar tarefas: nao existem tarefas para serem listadas");
 }
 else {
