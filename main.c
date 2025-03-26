@@ -47,5 +47,5 @@ printf("Erro ao salvar tarefas em arquivo");
 
 
 system ("pause");
-
+return 0; //Erro 14
 }

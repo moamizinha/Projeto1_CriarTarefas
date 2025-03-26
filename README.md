@@ -19,6 +19,7 @@ main.c
 11 - na linha 18 na funcao do menu, pois foi mudado o nome da funcao para exibirMenu, estava "exibeMenu(); " foi mudado para "exibirMenu()".
 12 - na linha 36 pois no codigo esta "if (codigo ==2)" mas daria outro tipo de erro, foi mudado para "if (codigo ==1)".
 13 - na linha 45 pois no codigo esta como "if(codigo ==0)" mas tem que ser diferente, foi mudado para "if(codigo !=0)".
+14 - na linha 50 pois faltou o "return 0;".
 
 ////////////////////////////////////////////////////////////////////////////
 Projeto.h
