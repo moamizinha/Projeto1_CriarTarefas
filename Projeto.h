@@ -7,7 +7,7 @@ typedef struct {
 } Tarefa;
 
 typedef struct {
-    Tarefa tarefas[100];
+    Tarefa tarefas[TOTAL_TAREFAS]; //Erro 3
     int qtd;
 } ListaDeTarefa;
 
