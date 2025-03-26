@@ -77,7 +77,7 @@ int salvarTarefas(ListaDeTarefas *lt, char *nome){
    return 0;
 }
 
-void exibeMenu(){
+void exibirMenu(){ //Erro 10
     printf("menu\n");
     printf("1. Criar tarefa\n");
     printf("2. Deletar tarefa\n");

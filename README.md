@@ -9,6 +9,7 @@ Projeto.c
 2 - chamando as bibliotecas com "", teria que chamar com <>.
 8 - na linha 60, pois estava "int carregarTarefas(ListaDeTarefas *lt, char *nome){" mas foi mudado para "int carregarTarefas(ListaDeTarefas *lt, char *nome){" faltou o "*".
 9 - na linha 71, faltou apenas colocar o ponto e virgula ";".
+10 - na linha 80 na funcao do menu, pois foi mudado o nome da funcao exibirMenu, estava "void exibeMenu(){" foi mudado para "void exibirMenu(){".
 
 ////////////////////////////////////////////////////////////////////////////
 main.c
