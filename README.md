@@ -26,7 +26,8 @@ main.c
 
 ////////////////////////////////////////////////////////////////////////////
 Projeto.h
-3 - pois está falando que são 100, mas o TOTAL_TAREFAS é 5.
+3 - pois está escrito que é 100, mas teria que escrever TOTAL_TAREFAS.
 4 - linha 12, na ListaDeTarefas pois estava escrito ListaDeTarefa no singular, enquanto as funcoes que estavam sendo chamadas estava ListaDeTarefas no plural.
 5 - na linha 18, pois estava ", char *nomes" mudei para ", char *nome".
 6 - na linha 21, pois estava "exibeMenu" foi mudado para "exibirMenu".
+18 - na linha 1 pois no codigo estava "#define TOTAL_TAREFAS 5", foi preciso mudar para ter mais tarefas, foi mudado para "#define TOTAL_TAREFAS 100".
