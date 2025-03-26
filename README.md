@@ -13,6 +13,8 @@ Projeto.c
 main.c
 1 - chamando o aruivo de projeto.h, no arquivo é maiusculo e nocodigo estava minusculo.
 2 - chamando as bibliotecas com "", teria que chamar com <>.
+7 - na linha 10, pois estava "codigo=carregarTarefas(lt, arquivo);" foi mudado para "codigo=carregarTarefas(&lt, arquivo);" faltou o "&" para compilar.
+
 
 
 ////////////////////////////////////////////////////////////////////////////
