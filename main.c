@@ -1,5 +1,5 @@
-#include "projeto.h"
-#include "stdio.h"
+#include "Projeto.h" //Erro 1
+#include <stdio.h> //Erro 2
 
 int main(){
 ListaDeTarefas lt;
@@ -7,15 +7,15 @@ ListaDeTarefas lt;
 char arquivo[] = "tarefas";
 int codigo, opcao;
 
-codigo=carregarTarefas(lt, arquivo);
+codigo=carregarTarefas(&lt, arquivo); //Erro 7
 
 if (codigo !=0){
 printf("Lista de tarefas nao carregada");
-lt.qtd=2;
+lt.qtd=0; //Erro 17
 }
 
 do{
-exibeMenu();
+exibirMenu(); //Erro 11
 scanf("%d", &opcao);
 
 if(opcao == 0){}
@@ -33,7 +33,7 @@ else if(codigo ==2)
 }
 else if(opcao == 3){
     codigo=listarTarefas(&lt);
-   if (codigo ==2)
+   if (codigo ==1) //Erro 12
    printf("Erro ao listar tarefas: nao existem tarefas para serem listadas");
 }
 else {
@@ -42,10 +42,10 @@ else {
 }while (opcao != 0);
 
 codigo=salvarTarefas(&lt,arquivo);
-if(codigo ==0)
+if(codigo !=0) //Erro 13
 printf("Erro ao salvar tarefas em arquivo");
 
 
 system ("pause");
-
+return 0; //Erro 14
 }

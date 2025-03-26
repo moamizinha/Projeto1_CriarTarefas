@@ -1,11 +1,11 @@
-#include "projeto.h"
-#include "stdio.h"
-#include "string.h"
+#include "Projeto.h" //Erro 1
+#include <stdio.h> // Erro 2
+#include <string.h> //Erro 2
 
 int criarTarefa(ListaDeTarefas *lt){
     if(lt->qtd >= TOTAL_TAREFAS)
     return 1;
-    
+
 	Tarefa *t=&lt->tarefas[lt->qtd];
 
     printf("Entre com a prioridade da tarefa: ");
@@ -25,63 +25,62 @@ int criarTarefa(ListaDeTarefas *lt){
 int deletarTarefa(ListaDeTarefas *lt){
    if (lt->qtd == 0)
    return 1;
-   
+
    int pos;
    printf("Entre com a posicao que deseja deletar: ");
    scanf("%d", &pos);
-   
-   if (pos <0 || pos < lt->qtd - 1)
+
+   if (pos <0 || pos > lt->qtd - 1) //Erro 15
    return 2;
-   
+
    for (; pos<lt->qtd-1; pos++){
-   	lt->tarefas[pos].prioridade=lt->tarefas[pos+1].prioridade; 
-	   strcpy(lt->tarefas[pos].descricao, lt->tarefas[pos+1].categoria); 
+   	lt->tarefas[pos].prioridade=lt->tarefas[pos+1].prioridade;
+	   strcpy(lt->tarefas[pos].descricao, lt->tarefas[pos+1].descricao); //Erro 16
 	   strcpy(lt->tarefas[pos].categoria, lt->tarefas[pos+1].categoria);
 
    }
-   
+
     lt->qtd--;
 	return 0;
 }
 int listarTarefas(ListaDeTarefas *lt){
 	if(lt->qtd == 0)
 	return 1;
-	
+
 
 int i;
 for(i=0; i< lt->qtd; i++){
-	printf("Pos: %d \t Prioridade: %d \t Categoria: %s\n", i, 
+	printf("Pos: %d \t Prioridade: %d \t Categoria: %s\n", i,
 	lt->tarefas[i].prioridade, lt->tarefas[i].categoria);
 	printf("Descricao: %s\n", lt->tarefas[i].descricao);
 }
     return 0;
 }
 
-int carregarTarefas(ListaDeTarefas *lt, char nome){
+int carregarTarefas(ListaDeTarefas *lt, char *nome){ //Erro 8
    FILE *fp=fopen(nome, "rb");
    if (fp == NULL)
    return 1;
-   
+
    fread(lt, sizeof(ListaDeTarefas),1,fp);
    fclose(fp);
    return 0;
 }
 
 int salvarTarefas(ListaDeTarefas *lt, char *nome){
-   FILE *fp=fopen(nome, "wb")
+   FILE *fp=fopen(nome, "wb"); //Erro 9
    if (fp == NULL)
    return 1;
-   
+
    fwrite(lt, sizeof(ListaDeTarefas),1,fp);
    fclose(fp);
    return 0;
 }
 
-void exibeMenu(){
-    printf("menu\n");
+void exibirMenu(){ //Erro 10
+    printf("\nmenu\n"); //ajuste 1
     printf("1. Criar tarefa\n");
     printf("2. Deletar tarefa\n");
 	printf("3. Listar tarefa\n");
 	printf("0. Sair\n");
 	}
-
