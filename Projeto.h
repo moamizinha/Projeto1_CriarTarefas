@@ -18,4 +18,4 @@ int listarTarefas(ListaDeTarefas *lt);
 int carregarTarefas(ListaDeTarefas *lt, char *nome); //Erro 5
 int salvarTarefas(ListaDeTarefas *lt, char *nome);
 
-void exibeMenu();
+void exibirMenu(); //Erro 6

@@ -20,3 +20,4 @@ Projeto.h
 3 - pois está falando que são 100, mas o TOTAL_TAREFAS é 5.
 4 - linha 12, na ListaDeTarefas pois estava escrito ListaDeTarefa no singular, enquanto as funcoes que estavam sendo chamadas estava ListaDeTarefas no plural.
 5 - na linha 18, pois estava ", char *nomes" mudei para ", char *nome".
+6 - na linha 21, pois estava "exibeMenu" foi mudado para "exibirMenu".
