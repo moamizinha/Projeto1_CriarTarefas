@@ -68,7 +68,7 @@ int carregarTarefas(ListaDeTarefas *lt, char *nome){ //Erro 8
 }
 
 int salvarTarefas(ListaDeTarefas *lt, char *nome){
-   FILE *fp=fopen(nome, "wb")
+   FILE *fp=fopen(nome, "wb"); //Erro 9
    if (fp == NULL)
    return 1;
    

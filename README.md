@@ -8,6 +8,7 @@ Projeto.c
 1 - chamando o aruivo de projeto.h, no arquivo é maiusculo e nocodigo estava minusculo.
 2 - chamando as bibliotecas com "", teria que chamar com <>.
 8 - na linha 60, pois estava "int carregarTarefas(ListaDeTarefas *lt, char *nome){" mas foi mudado para "int carregarTarefas(ListaDeTarefas *lt, char *nome){" faltou o "*".
+9 - na linha 71, faltou apenas colocar o ponto e virgula ";".
 
 ////////////////////////////////////////////////////////////////////////////
 main.c
