@@ -1,5 +1,5 @@
 #include "Projeto.h" //Erro 1
-#include <stdio.h>
+#include <stdio.h> //Erro 2
 
 int main(){
 ListaDeTarefas lt;

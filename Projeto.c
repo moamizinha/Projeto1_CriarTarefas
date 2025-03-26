@@ -1,6 +1,6 @@
 #include "Projeto.h" //Erro 1
-#include <stdio.h>
-#include <string.h>
+#include <stdio.h> // Erro 2
+#include <string.h> //Erro 2
 
 int criarTarefa(ListaDeTarefas *lt){
     if(lt->qtd >= TOTAL_TAREFAS)
