@@ -12,6 +12,7 @@ Projeto.c
 10 - na linha 80 na funcao do menu, pois foi mudado o nome da funcao para exibirMenu, estava "void exibeMenu(){" foi mudado para "void exibirMenu(){".
 15 - na funcao deletarTarefa da linha 33, pois no codigo esta como "if (pos <0 || pos < lt->qtd - 1)" foi mudado para "if (pos <0 || pos > lt->qtd - 1)".
 16 - na funcao deletarTarefa da linha 38, pois no codigo esta como "strcpy(lt->tarefas[pos].descricao, lt->tarefas[pos+1].categoria);" mas esta fazendo da descricao nao da categoria esta diferente, foi mudado para "strcpy(lt->tarefas[pos].descricao, lt->tarefas[pos+1].descricao);".
+ajuste 1 - na linha 81 estava como "printf("menu\n");" mas foi necessario colocar outro "\n" pois o printf do menu esta aparecendo junto com a resposta, foi alterado para "printf("\nmenu\n");".
 
 ////////////////////////////////////////////////////////////////////////////
 main.c
