@@ -8,13 +8,13 @@ Gustavo Runge Passarelli
 
 PROBLEMAS CORRIGIDOS:
 --Erros em 'Project.h'
-*
+
 
 --Erros em 'Project.c'
-*
+
 
 --Erros em 'main.c'
-*
+
 
 
 FUNÇÕES IMPLEMENTADAS:
