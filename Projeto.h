@@ -17,4 +17,5 @@ int listarTarefas(ListaDeTarefas *lt);
 
 int carregarTarefas(ListaDeTarefas *lt, char *nomes);
 int salvarTarefas(ListaDeTarefas *lt, char *nome);
+
 void exibeMenu();
