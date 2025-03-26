@@ -9,14 +9,14 @@ Projeto.c
 2 - chamando as bibliotecas com "", teria que chamar com <>.
 8 - na linha 60, pois estava "int carregarTarefas(ListaDeTarefas *lt, char *nome){" mas foi mudado para "int carregarTarefas(ListaDeTarefas *lt, char *nome){" faltou o "*".
 9 - na linha 71, faltou apenas colocar o ponto e virgula ";".
-10 - na linha 80 na funcao do menu, pois foi mudado o nome da funcao exibirMenu, estava "void exibeMenu(){" foi mudado para "void exibirMenu(){".
+10 - na linha 80 na funcao do menu, pois foi mudado o nome da funcao para exibirMenu, estava "void exibeMenu(){" foi mudado para "void exibirMenu(){".
 
 ////////////////////////////////////////////////////////////////////////////
 main.c
 1 - chamando o aruivo de projeto.h, no arquivo é maiusculo e nocodigo estava minusculo.
 2 - chamando as bibliotecas com "", teria que chamar com <>.
 7 - na linha 10, pois estava "codigo=carregarTarefas(lt, arquivo);" foi mudado para "codigo=carregarTarefas(&lt, arquivo);" faltou o "&" para compilar.
-
+11 - na linha 18 na funcao do menu, pois foi mudado o nome da funcao para exibirMenu, estava "exibeMenu(); " foi mudado para "exibirMenu()".
 
 ////////////////////////////////////////////////////////////////////////////
 Projeto.h

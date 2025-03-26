@@ -15,7 +15,7 @@ lt.qtd=2;
 }
 
 do{
-exibeMenu();
+exibirMenu(); //Erro 11
 scanf("%d", &opcao);
 
 if(opcao == 0){}
