@@ -32,3 +32,15 @@ Projeto.h
 5 - na linha 18, pois estava ", char *nomes" mudei para ", char *nome".
 6 - na linha 21, pois estava "exibeMenu" foi mudado para "exibirMenu".
 18 - na linha 1 pois no codigo estava "#define TOTAL_TAREFAS 5", foi preciso mudar para ter mais tarefas, foi mudado para "#define TOTAL_TAREFAS 100".
+
+////////////////////////////////////////////////////////////////////////////
+NOVAS IMPLEMENTAÇÕES DE FUNÇÕES
+
+Projeto.c
+Foi criada uma nova funcao de editarTarefa na linha 91
+
+main.c
+inserindo nava opcao para o editarTarefa na linha 39.
+
+Projeto.h
+Foi criada uma nova funcao de editarTarefa na linha 21
