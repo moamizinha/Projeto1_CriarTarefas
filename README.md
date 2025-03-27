@@ -38,9 +38,12 @@ NOVAS IMPLEMENTAÇÕES DE FUNÇÕES
 
 Projeto.c
 Foi criada uma nova funcao de editarTarefa na linha 91
+funcao criada para contar Tarefas com determinada prioridade na linha 119
 
 main.c
 inserindo nava opcao para o editarTarefa na linha 39.
+inserindo nava opcao para o contarTarefas na linha 46.
 
 Projeto.h
 Foi criada uma nova funcao de editarTarefa na linha 21
+foi criado a nova funcao que conta as tarefas com determinada prioridade na linha 22

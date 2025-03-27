@@ -43,6 +43,13 @@ else if(opcao == 4){ //É a nova funcao de editarTarefa
 	else if(codigo == 2)
 	printf("erro ao editar a tarefa: posicao invalida\n");
 }
+else if(opcao == 5){ //É a nova funcao de editarTarefa
+	int prioridade;
+	printf("Digite a prioridade para contar as tarefas: ");
+    scanf("%d", &prioridade);
+	int total = contarTarefas(&lt, prioridade);
+    printf("Total de tarefas com prioridade %d: %d\n", prioridade, total);
+}
 else {
 	printf("opcao invalida\n");
 }

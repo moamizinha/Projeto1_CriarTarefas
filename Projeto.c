@@ -82,6 +82,8 @@ void exibirMenu(){ //Erro 10
     printf("1. Criar tarefa\n");
     printf("2. Deletar tarefa\n");
 	printf("3. Listar tarefa\n");
+    printf("4. Editar tarefa\n");
+    printf("5. Contar tarefas por prioridade\n");
 	printf("0. Sair\n");
 	}
 
@@ -111,4 +113,16 @@ int editarTarefa(ListaDeTarefas *lt) {
     scanf("%s", lt->tarefas[pos].descricao);
 
     return 0;
+}
+
+// Função para contar tarefas com determinada prioridade
+int contarTarefas(ListaDeTarefas *lt, int prioridade) {
+    int contador = 0;
+    int i;
+    for (i = 0; i < lt->qtd; i++) {
+        if (lt->tarefas[i].prioridade == prioridade) {
+            contador++;
+        }
+    }
+    return contador;
 }

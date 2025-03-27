@@ -19,5 +19,6 @@ int carregarTarefas(ListaDeTarefas *lt, char *nome); //Erro 5
 int salvarTarefas(ListaDeTarefas *lt, char *nome);
 
 int editarTarefa(ListaDeTarefas *lt); //É a nova funcao que vai editar a tarefa
+int contarTarefas(ListaDeTarefas *lt, int prioridade); //nova funcao que conta as tarefas com determinada prioridade
 
 void exibirMenu(); //Erro 6
