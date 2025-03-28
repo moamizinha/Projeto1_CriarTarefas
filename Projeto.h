@@ -1,4 +1,4 @@
-#define TOTAL_TAREFAS 5
+#define TOTAL_TAREFAS 100 //Erro 18
 
 typedef struct {
     int prioridade;
@@ -7,14 +7,17 @@ typedef struct {
 } Tarefa;
 
 typedef struct {
-    Tarefa tarefas[100];
+    Tarefa tarefas[TOTAL_TAREFAS]; //Erro 3
     int qtd;
-} ListaDeTarefa;
+} ListaDeTarefas; //Erro 4
 
 int criarTarefa(ListaDeTarefas *lt);
 int deletarTarefa(ListaDeTarefas *lt);
 int listarTarefas(ListaDeTarefas *lt);
 
-int carregarTarefas(ListaDeTarefas *lt, char *nomes);
+int carregarTarefas(ListaDeTarefas *lt, char *nome); //Erro 5
 int salvarTarefas(ListaDeTarefas *lt, char *nome);
-void exibeMenu();
+
+int editarTarefa(ListaDeTarefas *lt); //É a nova funcao que vai editar a tarefa
+
+void exibirMenu(); //Erro 6
