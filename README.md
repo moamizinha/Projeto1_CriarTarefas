@@ -34,16 +34,19 @@ Projeto.h
 18 - na linha 1 pois no codigo estava "#define TOTAL_TAREFAS 5", foi preciso mudar para ter mais tarefas, foi mudado para "#define TOTAL_TAREFAS 100".
 
 ////////////////////////////////////////////////////////////////////////////
-NOVAS IMPLEMENTAÇÕES DE FUNÇÕES
+NOVAS IMPLEMENTAÇÕES DAS FUNÇÕES
 
 Projeto.c
-Foi criada uma nova funcao de editarTarefa na linha 91
-funcao criada para contar Tarefas com determinada prioridade na linha 119
+Foi criada uma nova funcao de editarTarefa na linha 91.
+funcao criada para contar Tarefas com determinada prioridade na linha 119.
+funcao criada para a busca de tarefas por categoria na linha 131.
 
 main.c
 inserindo nava opcao para o editarTarefa na linha 39.
 inserindo nava opcao para o contarTarefas na linha 46.
+inserindo nava opcao para o buscarTarefas na linha 53.
 
 Projeto.h
-Foi criada uma nova funcao de editarTarefa na linha 21
-foi criado a nova funcao que conta as tarefas com determinada prioridade na linha 22
+Foi criada uma nova funcao de editarTarefa na linha 21.
+foi criado a nova funcao que conta as tarefas com determinada prioridade na linha 22.
+a funcao que esta sendo chamada que é a busca tarefas por categoria.

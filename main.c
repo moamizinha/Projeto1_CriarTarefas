@@ -50,6 +50,12 @@ else if(opcao == 5){ //É a nova funcao de editarTarefa
 	int total = contarTarefas(&lt, prioridade);
     printf("Total de tarefas com prioridade %d: %d\n", prioridade, total);
 }
+else if (opcao == 6) { // É a nova funcao que busca tarefas por categoria
+    char categoria[100];
+    printf("Digite a categoria para buscar: ");
+    scanf("%s", categoria);
+    buscarTarefasPorCategoria(&lt, categoria);
+}
 else {
 	printf("opcao invalida\n");
 }

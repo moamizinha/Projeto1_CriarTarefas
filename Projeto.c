@@ -84,6 +84,7 @@ void exibirMenu(){ //Erro 10
 	printf("3. Listar tarefa\n");
     printf("4. Editar tarefa\n");
     printf("5. Contar tarefas por prioridade\n");
+    printf("6. Buscar tarefas por categoria\n");
 	printf("0. Sair\n");
 	}
 
@@ -125,4 +126,20 @@ int contarTarefas(ListaDeTarefas *lt, int prioridade) {
         }
     }
     return contador;
+}
+
+// Função para buscar tarefas por categoria
+void buscarTarefasPorCategoria(ListaDeTarefas *lt, char *categoria) {
+    int encontrou = 0;
+    int i;
+    for (i = 0; i < lt->qtd; i++) {
+        if (strcmp(lt->tarefas[i].categoria, categoria) == 0) {
+            printf("Posição: %d | Prioridade: %d | Descrição: %s\n", 
+                   i, lt->tarefas[i].prioridade, lt->tarefas[i].descricao);
+            encontrou = 1;
+        }
+    }
+    if (!encontrou) {
+        printf("Nenhuma tarefa encontrada na categoria '%s'.\n", categoria);
+    }
 }
