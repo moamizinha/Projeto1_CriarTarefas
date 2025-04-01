@@ -15,6 +15,6 @@ int criarTarefa(ListaDeTarefas *lt);
 int deletarTarefa(ListaDeTarefas *lt);
 int listarTarefas(ListaDeTarefas *lt);
 
-int carregarTarefas(ListaDeTarefas *lt, char *nomes);
+int carregarTarefas(ListaDeTarefas *lt, char *nome);   //nome estava no plural
 int salvarTarefas(ListaDeTarefas *lt, char *nome);
 void exibeMenu();
