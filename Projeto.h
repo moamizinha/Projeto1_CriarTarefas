@@ -1,4 +1,4 @@
-#define TOTAL_TAREFAS 5
+#define TOTAL_TAREFAS 100  //número máximo de tarefas é 100 e não 5
 
 typedef struct {
     int prioridade;
