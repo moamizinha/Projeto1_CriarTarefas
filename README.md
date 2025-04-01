@@ -14,6 +14,12 @@ PROBLEMAS CORRIGIDOS:
 ++Linha 12 - "ListaDeTarefas" estava sem o "s" no final;
 
 ++Linha 18 - "nome" estava com "s" no final;
+    -------------
+   | typedef struct {
+   |     Tarefa tarefas[100]; --------->  padronizando  o ListaDeTarefas em que ocorre que antes estava escrito no singular
+   |     int qtd; 
+   | } ListaDeTarefa; 
+    ------------
 
 
 --Erros em 'Projeto.c':
@@ -30,6 +36,12 @@ PROBLEMAS CORRIGIDOS:
 
 ++Linha 71 - Faltou o ponto e vírgula(;) no final da linha;
 
+mudado de posição < lt->qtd - 1, por >= para validar de forma correta o posição;
+removido strcpy(lt->tarefas[pos].categoria, lt->tarefas[pos+1].categoria); para poder copiar o campo que possui .descrição na pos+1;
+adicionado * no char nome;
+adicionado o ";" na linha do FILE *fp=fopen(nome, "wb");
+
+
 
 --Erros em 'main.c':
 
@@ -45,6 +57,7 @@ PROBLEMAS CORRIGIDOS:
 
 ++Linha 45 - O certo é '!=0' e não '==0', pois 0 é o código de retorno caso não tenha erros, então só se for diferente(!=) de 0, que avisamos ao usuário que tem erros;
 
+Adicionado as chaves {} que estava faltando na estrutura do if;
 
 
 FUNÇÕES IMPLEMENTADAS:
