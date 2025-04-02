@@ -1,4 +1,4 @@
-#define TOTAL_TAREFAS 5
+#define TOTAL_TAREFAS 100 // Número máximo de tarefas ajustado
 
 typedef struct {
     int prioridade;
@@ -7,14 +7,17 @@ typedef struct {
 } Tarefa;
 
 typedef struct {
-    Tarefa tarefas[100];
+    Tarefa tarefas[TOTAL_TAREFAS]; // Corrigido o nome da variável para tarefas, ao invés de "tarefas"
     int qtd;
-} ListaDeTarefa;
-
+} ListaDeTarefas; // Erro no nome da struct, deve ser ListaDeTarefas
+ 
 int criarTarefa(ListaDeTarefas *lt);
 int deletarTarefa(ListaDeTarefas *lt);
 int listarTarefas(ListaDeTarefas *lt);
-
-int carregarTarefas(ListaDeTarefas *lt, char *nomes);
+int carregarTarefas(ListaDeTarefas *lt, char *nome); // Corrigido o nome do parâmetro para char *nome, ao invés de "nomes" 
 int salvarTarefas(ListaDeTarefas *lt, char *nome);
+
+int editarTarefas(ListaDeTarefas *lt);  // Declaração da função de edição de tarefas
+int ordenarTarefas(ListaDeTarefas *lt); // Declaração da função de ordenar tarefas por prioridade
+int buscarTarefas(ListaDeTarefas *lt, char *categoria); // Declaração da função de buscar tarefas por categoria
 void exibeMenu();
