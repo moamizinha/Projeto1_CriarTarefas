@@ -1,15 +1,11 @@
-README 📚
-Descrição do Projeto
-O objetivo deste projeto foi corrigir e melhorar a estrutura do código, utilizando o GitHub como ferramenta para controle de versão e colaboração. Durante o processo, foram feitas várias modificações, incluindo a atualização de métodos e a adição de comentários explicativos no código para facilitar o entendimento e a manutenção do sistema. 🔧⚙️
-
-Alterações Realizadas 🔨
+# 🔨 Alterações Realizadas
 1. Correção e Refatoração dos Métodos
 Todos os métodos do projeto foram atualizados e refatorados para garantir um código mais limpo, eficiente e com melhores práticas de desenvolvimento. ✍️
 
-2. Comentários no Código
+# 2. Comentários no Código
 O código foi amplamente comentado para fornecer explicações sobre as mudanças realizadas, permitindo que outros desenvolvedores compreendam facilmente a lógica implementada. 📝
 
-Como Rodar o Projeto 🚀
+🚀 Como Rodar o Projeto
 Clone este repositório:
 
 bash
@@ -28,7 +24,7 @@ bash
 Copiar
 Editar
 comando-para-executar
-Contribuições 🤝
+🤝 Contribuições
 Se você deseja contribuir com o projeto, siga as etapas abaixo:
 
 Crie um fork do repositório.
@@ -53,9 +49,8 @@ Editar
 git push origin minha-nova-branch
 Crie um pull request no GitHub.
 
-Licença 📝
-Este projeto está licenciado sob a Licença XYZ.
-
-Membros do Projeto 👥
+# 👥 Membros do Projeto
 Igor Marques Pieralini
 RA: 24224003-4
+
+Isso organiza a estrutura de forma clara e prática. Se precisar de mais algum ajuste, estou à disposição!
