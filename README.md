@@ -144,4 +144,3 @@ As correções feitas melhoraram a segurança do código, corrigiram erros de si
 Igor Marques Pieralini RA: 24224003-4
 Victor Augusto Caramori André RA: 24.224.009-1
 
-Isso organiza a estrutura de forma clara e prática. Se precisar de mais algum ajuste, estou à disposição!
