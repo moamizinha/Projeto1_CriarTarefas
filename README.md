@@ -1,5 +1,5 @@
 # 🔨 Alterações Realizadas
-1. Correção e Refatoração dos Métodos
+# 1. Correção e Refatoração dos Métodos
 Todos os métodos do projeto foram atualizados e refatorados para garantir um código mais limpo, eficiente e com melhores práticas de desenvolvimento. ✍️
 
 # 2. Comentários no Código
