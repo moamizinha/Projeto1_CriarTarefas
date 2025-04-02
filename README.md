@@ -50,7 +50,7 @@ git push origin minha-nova-branch
 Crie um pull request no GitHub.
 
 # 👥 Membros do Projeto
-Igor Marques Pieralini
-RA: 24224003-4
+Igor Marques Pieralini RA: 24224003-4
+Victor Augusto Caramori André RA: 24.224.009-1
 
 Isso organiza a estrutura de forma clara e prática. Se precisar de mais algum ajuste, estou à disposição!
