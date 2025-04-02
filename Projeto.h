@@ -9,12 +9,12 @@ typedef struct {
 typedef struct {
     Tarefa tarefas[100];
     int qtd;
-} ListaDeTarefa;
+} ListaDeTarefas;  // Corrigido o nome aqui para 'ListaDeTarefas'
 
-int criarTarefa(ListaDeTarefas *lt);
-int deletarTarefa(ListaDeTarefas *lt);
-int listarTarefas(ListaDeTarefas *lt);
+int criarTarefa(ListaDeTarefas *lt);  // Corrigido para 'ListaDeTarefas'
+int deletarTarefa(ListaDeTarefas *lt);  // Corrigido para 'ListaDeTarefas'
+int listarTarefas(ListaDeTarefas *lt);  // Corrigido para 'ListaDeTarefas'
 
-int carregarTarefas(ListaDeTarefas *lt, char *nomes);
-int salvarTarefas(ListaDeTarefas *lt, char *nome);
-void exibeMenu();
+int carregarTarefas(ListaDeTarefas *lt, char *nome);  // Corrigido para 'ListaDeTarefas'
+int salvarTarefas(ListaDeTarefas *lt, char *nome);  // Corrigido para 'ListaDeTarefas'
+void exibeMenu(); 
