@@ -1,6 +1,6 @@
 #include "projeto.h"
-#include <string.h>
-#include <stdio.h>
+#include "stdio.h"
+#include "string.h"
 
 int criarTarefa(ListaDeTarefas *lt){
     if(lt->qtd >= TOTAL_TAREFAS)
@@ -30,15 +30,16 @@ int deletarTarefa(ListaDeTarefas *lt){
    printf("Entre com a posicao que deseja deletar: ");
    scanf("%d", &pos);
    
-   if (pos <0 || pos >= lt->qtd - 1) // mudado de posição < lt->qtd - 1, por >= para validar de forma correta o posição
+   if (pos <0 || pos < lt->qtd - 1)
    return 2;
    
    for (; pos<lt->qtd-1; pos++){
    	lt->tarefas[pos].prioridade=lt->tarefas[pos+1].prioridade; 
-	   strcpy(lt->tarefas[pos].descricao, lt->tarefas[pos+1].categoria);
-	 
+	   strcpy(lt->tarefas[pos].descricao, lt->tarefas[pos+1].categoria); 
+	   strcpy(lt->tarefas[pos].categoria, lt->tarefas[pos+1].categoria);
 
    }
+   
     lt->qtd--;
 	return 0;
 }
@@ -56,7 +57,7 @@ for(i=0; i< lt->qtd; i++){
     return 0;
 }
 
-int carregarTarefas(ListaDeTarefas *lt, char * nome){ //adicionado o * no char do nome 
+int carregarTarefas(ListaDeTarefas *lt, char nome){
    FILE *fp=fopen(nome, "rb");
    if (fp == NULL)
    return 1;
@@ -66,8 +67,8 @@ int carregarTarefas(ListaDeTarefas *lt, char * nome){ //adicionado o * no char d
    return 0;
 }
 
-int salvarTarefas(ListaDeTarefas *lt, char * nome){
-   FILE *fp=fopen(nome, "wb"); //adicionado ;
+int salvarTarefas(ListaDeTarefas *lt, char *nome){
+   FILE *fp=fopen(nome, "wb")
    if (fp == NULL)
    return 1;
    
@@ -83,4 +84,3 @@ void exibeMenu(){
 	printf("3. Listar tarefa\n");
 	printf("0. Sair\n");
 	}
-

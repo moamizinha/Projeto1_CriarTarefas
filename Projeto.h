@@ -9,7 +9,7 @@ typedef struct {
 typedef struct {
     Tarefa tarefas[100];
     int qtd;
-} ListaDeTarefas; // estava escrito errado 
+} ListaDeTarefa;
 
 int criarTarefa(ListaDeTarefas *lt);
 int deletarTarefa(ListaDeTarefas *lt);
