@@ -1,4 +1,4 @@
-#include "projeto.h"
+#include "Projeto.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -38,9 +38,7 @@ int deletarTarefa(ListaDeTarefas *lt) {
         return 2;
 
     for (int i = pos; i < lt->qtd - 1; i++) {
-        lt->tarefas[i].prioridade = lt->tarefas[i + 1].prioridade;
-        strcpy(lt->tarefas[i].descricao, lt->tarefas[i + 1].descricao);
-        strcpy(lt->tarefas[i].categoria, lt->tarefas[i + 1].categoria);
+        lt->tarefas[i] = lt->tarefas[i + 1];
     }
 
     lt->qtd--;
@@ -62,36 +60,103 @@ int listarTarefas(ListaDeTarefas *lt) {
         printf("-----------------------------\n");
     }
 
+    printf("Fim da lista de tarefas.\n");
     return 0;
 }
 
 
-int carregarTarefas(ListaDeTarefas *lt, char nome){
+int carregarTarefas(ListaDeTarefas *lt, const char *nome){
    FILE *fp=fopen(nome, "rb");
    if (fp == NULL)
-   return 1;
+       return 1;
    
    fread(lt, sizeof(ListaDeTarefas),1,fp);
    fclose(fp);
    return 0;
 }
 
-int salvarTarefas(ListaDeTarefas *lt, char *nome){
-   FILE *fp=fopen(nome, "wb")
+int salvarTarefas(ListaDeTarefas *lt, const char *nome){
+   FILE *fp=fopen(nome, "wb");
    if (fp == NULL)
-   return 1;
+       return 1;
    
    fwrite(lt, sizeof(ListaDeTarefas),1,fp);
    fclose(fp);
    return 0;
 }
 
+int editarTarefa(ListaDeTarefas *lt) {
+    if (lt->qtd == 0) {
+        printf("Nenhuma tarefa para editar.\n");
+        return 1;
+    }
+
+    int pos;
+    printf("Digite a posição da tarefa que deseja editar: ");
+    scanf("%d", &pos);
+    getchar();
+
+    if (pos < 0 || pos >= lt->qtd) {
+        printf("Posição inválida!\n");
+        return 2;
+    }
+
+    printf("Nova prioridade: ");
+    scanf("%d", &lt->tarefas[pos].prioridade);
+    getchar();
+
+    printf("Nova categoria: ");
+    fgets(lt->tarefas[pos].categoria, sizeof(lt->tarefas[pos].categoria), stdin);
+    lt->tarefas[pos].categoria[strcspn(lt->tarefas[pos].categoria, "\n")] = '\0';
+
+    printf("Nova descrição: ");
+    fgets(lt->tarefas[pos].descricao, sizeof(lt->tarefas[pos].descricao), stdin);
+    lt->tarefas[pos].descricao[strcspn(lt->tarefas[pos].descricao, "\n")] = '\0';
+
+    printf("Tarefa atualizada com sucesso!\n");
+
+    return 0;
+}
+
+int buscarTarefaPorCategoria(ListaDeTarefas *lt) {
+    if (lt->qtd == 0) {
+        printf("Nenhuma tarefa cadastrada.\n");
+        return 1;
+    }
+
+    char categoriaBusca[100];
+    printf("Digite a categoria que deseja buscar: ");
+    getchar();
+    fgets(categoriaBusca, sizeof(categoriaBusca), stdin);
+    categoriaBusca[strcspn(categoriaBusca, "\n")] = '\0';
+
+    int encontrou = 0;
+    for (int i = 0; i < lt->qtd; i++) {
+        if (strcmp(lt->tarefas[i].categoria, categoriaBusca) == 0) {
+            printf("Pos: %d \t Prioridade: %d \t Categoria: %s\n", i, 
+                   lt->tarefas[i].prioridade, lt->tarefas[i].categoria);
+            printf("Descrição: %s\n", lt->tarefas[i].descricao);
+            encontrou = 1;
+        }
+    }
+
+    if (!encontrou) {
+        printf("Nenhuma tarefa encontrada para essa categoria.\n");
+    }
+
+    return 0;
+}
+
 void exibeMenu(){
-    printf("menu\n");
+    printf("\n=== MENU ===\n");
     printf("1. Criar tarefa\n");
     printf("2. Deletar tarefa\n");
-    printf("3. Listar tarefa\n");
-    printf("4. Carregar tarefas\n");
-    printf("5. Salvar tarefas\n");
+    printf("3. Listar tarefas\n");
+    printf("4. Editar tarefa\n");
+    printf("5. Buscar tarefa por categoria\n");
+    printf("6. Carregar tarefas\n");
+    printf("7. Salvar tarefas\n");
     printf("0. Sair\n");
+    printf("=================\n");
+    printf("Escolha uma opção: ");
 }
