@@ -99,6 +99,44 @@ void exibeMenu() {
 
 ---
 
+# Gerenciador de Tarefas
+
+Este projeto implementa um gerenciador de tarefas simples em C. Ele permite criar, deletar, listar, salvar e carregar tarefas de um arquivo, além de oferecer novas funcionalidades para aprimorar sua experiência.
+
+## Funcionalidades
+
+- **Criar Tarefa**: Adiciona uma nova tarefa com prioridade, categoria e descrição.
+- **Deletar Tarefa**: Remove uma tarefa informando sua posição na lista.
+- **Listar Tarefas**: Exibe todas as tarefas cadastradas.
+- **Salvar Tarefas**: Salva as tarefas em um arquivo binário.
+- **Carregar Tarefas**: Carrega tarefas de um arquivo salvo.
+- **(Nova) Editar Tarefa**: Permite modificar uma tarefa existente.
+- **(Nova) Buscar Tarefa por Categoria**: Busca e exibe tarefas filtrando por categoria.
+
+## Como Usar
+
+1. Compile o código com:
+   ```sh
+   gcc -o gerenciador_tarefas main.c projeto.c
+   ```
+2. Execute o programa:
+   ```sh
+   ./gerenciador_tarefas
+   ```
+3. Navegue pelo menu e utilize as novas funções!
+
+## Estrutura do Código
+
+- `projeto.h`: Define as estruturas e assinaturas das funções.
+- `projeto.c`: Implementação das funções do gerenciador de tarefas.
+- `main.c`: Contém a função principal e o menu interativo.
+
+## Melhorias Futuras
+- Implementação de persistência em JSON para maior portabilidade.
+- Interface gráfica simples para facilitar a interação do usuário.
+
+Contribuições são bem-vindas! 😊
+
 ## Conclusão
 As correções feitas melhoraram a segurança do código, corrigiram erros de sintaxe e tornaram a implementação mais consistente e legível.
 
